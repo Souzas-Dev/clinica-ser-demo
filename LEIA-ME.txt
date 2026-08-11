@@ -1,0 +1,23 @@
+CLÍNICA SER — DEMONSTRAÇÃO CONCEITUAL
+======================================
+
+Arquivos:
+- index.html
+- style.css
+- script.js
+
+Como visualizar:
+1. Abra index.html no navegador.
+2. Para publicar, envie os três arquivos para qualquer hospedagem estática.
+
+Tecnologia:
+- HTML5
+- CSS3
+- JavaScript puro
+- Sem framework
+- Sem bibliotecas externas
+- Sem imagens externas
+
+Observação:
+Esta é uma demonstração conceitual criada para apresentação comercial.
+Revise dados de contato/endereço antes de publicar como site oficial.
