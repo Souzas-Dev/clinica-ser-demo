@@ -1962,3 +1962,827 @@ button, input, textarea, select {
 
 
 /* ===== SOUZAS DEV | IDENTIDADE DEMO | FIM ===== */
+
+/* ===== SOUZAS DEV | MOBILE V3 | INICIO ===== */
+
+
+/* ==========================================================
+   MOBILE PRINCIPAL
+========================================================== */
+
+@media (max-width: 700px) {
+
+  html {
+    scroll-padding-top: 82px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+  /* --------------------------------------------------------
+     CONTAINER
+  -------------------------------------------------------- */
+
+  .container {
+    width: min(calc(100% - 32px), var(--container));
+  }
+
+
+  /* --------------------------------------------------------
+     HEADER
+  -------------------------------------------------------- */
+
+  .site-header {
+    background: rgba(251, 250, 245, .97);
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .nav-wrap {
+    min-height: 72px;
+
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 9px;
+
+    min-width: 0;
+  }
+
+  .demo-brand-mark {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    border-radius: 12px;
+  }
+
+  .demo-brand-shape {
+    width: 17px;
+    height: 17px;
+
+    border-radius: 5px;
+  }
+
+  .demo-brand-shape::before {
+    width: 6px;
+    height: 6px;
+
+    left: 3.5px;
+    top: 3.5px;
+  }
+
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .brand-copy strong {
+    font-size: 14px;
+  }
+
+  .brand-copy small {
+    margin-top: 3px;
+
+    font-size: 7px;
+    line-height: 1.25;
+
+    letter-spacing: .45px;
+
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    border-radius: 12px;
+  }
+
+
+  /* --------------------------------------------------------
+     MENU MOBILE
+  -------------------------------------------------------- */
+
+  .main-nav {
+    inset: 72px 0 0 0;
+
+    width: 100%;
+    height: calc(100vh - 72px);
+    height: calc(100dvh - 72px);
+
+    min-height: 0;
+
+    padding:
+      18px
+      16px
+      calc(20px + env(safe-area-inset-bottom));
+
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+
+    -webkit-overflow-scrolling: touch;
+
+    background: rgba(251, 250, 245, .99);
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .main-nav > a:not(.btn) {
+    padding: 15px 8px;
+
+    font-size: 15px;
+  }
+
+  .nav-cta {
+    width: 100%;
+
+    margin-top: 18px;
+  }
+
+
+  /* --------------------------------------------------------
+     HERO
+  -------------------------------------------------------- */
+
+  .hero {
+    padding-top: 32px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero-copy {
+    max-width: none;
+
+    margin: 0;
+
+    text-align: left;
+  }
+
+  .hero .eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    letter-spacing: 1px;
+  }
+
+  .hero h1 {
+    max-width: 520px;
+
+    font-size: clamp(34px, 9.8vw, 44px);
+    line-height: 1.04;
+
+    letter-spacing: -1.7px;
+  }
+
+  .hero-text {
+    max-width: 520px;
+
+    margin: 18px 0 0;
+
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+
+    gap: 10px;
+
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding-inline: 18px;
+  }
+
+  .hero-highlights {
+    width: 100%;
+    max-width: none;
+
+    margin: 22px 0 0;
+
+    gap: 10px;
+
+    align-items: flex-start;
+
+    font-size: 12.5px;
+  }
+
+  .highlight {
+    min-height: 28px;
+  }
+
+
+  /* --------------------------------------------------------
+     FOTO DO HERO
+
+     No celular os cards deixam de flutuar sobre a imagem.
+     Isso evita colisões e dá uma composição mais limpa.
+  -------------------------------------------------------- */
+
+  .visual-card {
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    overflow: visible;
+  }
+
+  .visual-card::after {
+    display: none;
+  }
+
+  .hero-photo {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 4.7;
+
+    object-fit: cover;
+    object-position: 52% center;
+
+    border-radius: 24px;
+  }
+
+  .floating-card,
+  .fc-one,
+  .fc-two {
+    position: static;
+
+    inset: auto;
+
+    width: 100%;
+    max-width: none;
+
+    min-width: 0;
+
+    margin: 0;
+  }
+
+  .floating-card {
+    padding: 11px;
+
+    gap: 9px;
+
+    border-radius: 15px;
+
+    background: var(--white);
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    box-shadow:
+      0 8px 24px
+      rgba(18, 60, 51, .08);
+  }
+
+  .floating-icon {
+    width: 32px;
+    height: 32px;
+
+    flex: 0 0 32px;
+
+    border-radius: 10px;
+  }
+
+  .floating-card div {
+    min-width: 0;
+  }
+
+  .floating-card strong {
+    font-size: 11.5px;
+    line-height: 1.25;
+  }
+
+  .floating-card small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9.5px;
+    line-height: 1.3;
+  }
+
+
+  /* --------------------------------------------------------
+     FAIXA DE SERVIÇOS
+
+     Sai o scroll horizontal.
+  -------------------------------------------------------- */
+
+  .trust-strip {
+    min-height: 0;
+
+    margin-top: 32px;
+
+    padding: 18px 0 0;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    overflow: visible;
+
+    white-space: normal;
+
+    border-top: 1px solid var(--line);
+  }
+
+  .trust-strip span {
+    min-width: 0;
+
+    padding: 9px 10px;
+
+    border-radius: 999px;
+
+    background: rgba(223, 245, 238, .7);
+
+    color: var(--green-800);
+
+    text-align: center;
+
+    font-size: 10.5px;
+    line-height: 1.25;
+
+    font-weight: 720;
+  }
+
+  .trust-strip i {
+    display: none;
+  }
+
+
+  /* --------------------------------------------------------
+     SEÇÕES / TÍTULOS
+  -------------------------------------------------------- */
+
+  .section {
+    padding: 68px 0;
+  }
+
+  .services {
+    padding-top: 62px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    letter-spacing: 1px;
+  }
+
+  .section-heading h2,
+  .about-copy h2,
+  .contact-copy h2 {
+    font-size: clamp(30px, 8.5vw, 38px);
+    line-height: 1.08;
+
+    letter-spacing: -1.25px;
+  }
+
+  .section-heading p,
+  .about-copy p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+
+  /* --------------------------------------------------------
+     CARDS DE SERVIÇO
+  -------------------------------------------------------- */
+
+  .cards-grid {
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: 0;
+
+    padding: 18px;
+
+    border-radius: 20px;
+  }
+
+  .service-number {
+    margin-bottom: 7px;
+  }
+
+  .service-photo {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 16 / 10;
+
+    margin-top: 0;
+
+    border-radius: 14px;
+  }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-top: 15px;
+
+    border-radius: 15px;
+  }
+
+  .service-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .service-card h3 {
+    margin: 17px 0 8px;
+
+    font-size: 20px;
+  }
+
+  .service-card p {
+    margin-bottom: 21px;
+
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+
+
+  /* --------------------------------------------------------
+     SOBRE
+  -------------------------------------------------------- */
+
+  .about-grid {
+    gap: 34px;
+  }
+
+  .about-panel.photo-panel {
+    width: 100%;
+
+    aspect-ratio: 4 / 4.6;
+
+    border-radius: 24px;
+  }
+
+  .about-photo {
+    width: 100%;
+    height: 100%;
+
+    min-height: 0;
+
+    object-fit: cover;
+    object-position: center 48%;
+  }
+
+  .about-photo-badge {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    padding: 13px 14px;
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+  }
+
+  .about-photo-badge strong {
+    font-size: 13px;
+  }
+
+  .about-photo-badge span {
+    font-size: 10.5px;
+  }
+
+  .about-copy p {
+    margin-top: 16px;
+  }
+
+  .check-list {
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .check-list div {
+    align-items: flex-start;
+
+    gap: 9px;
+
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .check-list span {
+    width: 26px;
+    height: 26px;
+
+    flex: 0 0 26px;
+  }
+
+  .text-link {
+    margin-top: 24px;
+  }
+
+
+  /* --------------------------------------------------------
+     COMO FUNCIONA — formato vertical para leitura mobile
+  -------------------------------------------------------- */
+
+  .steps-grid {
+    gap: 12px;
+  }
+
+  .step {
+    padding: 18px;
+
+    display: grid;
+
+    grid-template-columns:
+      44px
+      minmax(0, 1fr);
+
+    column-gap: 14px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, .78);
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+  }
+
+  .step-index {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+
+    font-size: 15px;
+  }
+
+  .step h3 {
+    grid-column: 2;
+
+    align-self: center;
+
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .step p {
+    grid-column: 2;
+
+    max-width: none;
+
+    margin: 6px 0 0;
+
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+
+  /* --------------------------------------------------------
+     CONTATO
+  -------------------------------------------------------- */
+
+  .contact {
+    padding-top: 20px;
+    padding-bottom: 36px;
+  }
+
+  .contact-shell {
+    padding: 26px 18px;
+
+    gap: 26px;
+
+    border-radius: 24px;
+  }
+
+  .contact-copy p {
+    margin: 16px 0 22px;
+
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .contact-copy .btn {
+    width: 100%;
+
+    min-height: 50px;
+  }
+
+  .contact-details {
+    padding: 4px 16px;
+
+    border-radius: 18px;
+  }
+
+  .contact-item {
+    padding: 18px 0;
+  }
+
+  .contact-item a {
+    font-size: 14.5px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* --------------------------------------------------------
+     FOOTER
+  -------------------------------------------------------- */
+
+  .site-footer {
+    padding: 26px 0
+      calc(30px + env(safe-area-inset-bottom));
+  }
+
+  .footer-wrap {
+    gap: 14px;
+
+    line-height: 1.55;
+  }
+
+  .footer-wrap p {
+    max-width: 330px;
+  }
+
+  .brand-footer {
+    gap: 9px;
+  }
+
+  .brand-footer .demo-brand-mark {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+  }
+
+
+  /* --------------------------------------------------------
+     WHATSAPP FLUTUANTE
+  -------------------------------------------------------- */
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+
+    right: 14px;
+
+    bottom:
+      calc(14px + env(safe-area-inset-bottom));
+  }
+
+  .whatsapp-float svg {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  /* --------------------------------------------------------
+     ANIMAÇÕES MAIS LEVES
+  -------------------------------------------------------- */
+
+  .reveal {
+    transform: translateY(14px);
+
+    transition:
+      opacity .55s ease,
+      transform .55s ease;
+  }
+
+}
+
+
+/* ==========================================================
+   CELULARES PEQUENOS
+========================================================== */
+
+@media (max-width: 420px) {
+
+  .container {
+    width: min(calc(100% - 28px), var(--container));
+  }
+
+  .hero {
+    padding-top: 26px;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 9.8vw, 39px);
+
+    letter-spacing: -1.45px;
+  }
+
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .visual-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    grid-column: 1;
+  }
+
+  .floating-card {
+    min-height: 58px;
+  }
+
+  .trust-strip span {
+    padding-inline: 8px;
+
+    font-size: 10px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .services {
+    padding-top: 56px;
+  }
+
+  .section-heading h2,
+  .about-copy h2,
+  .contact-copy h2 {
+    font-size: clamp(29px, 8.5vw, 35px);
+  }
+
+  .service-card {
+    padding: 16px;
+  }
+
+  .contact-shell {
+    padding: 24px 16px;
+  }
+
+}
+
+
+/* ==========================================================
+   TELAS MUITO ESTREITAS
+========================================================== */
+
+@media (max-width: 360px) {
+
+  .brand-copy small {
+    max-width: 128px;
+
+    white-space: normal;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ===== SOUZAS DEV | MOBILE V3 | FIM ===== */
